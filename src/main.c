@@ -9,7 +9,7 @@
 #include "utils/utils.h"
 #include "common/common.h"
 
-#define TITLE_TEXT                  "NexoHaxx Title Installer (v1.0)"
+#define TITLE_TEXT                  "WUP installer by crediar (HBL version 1.0 by Dimok) minor edit by Nexocube."
 
 #define MCP_COMMAND_INSTALL_ASYNC   0x81
 #define MAX_INSTALL_PATH_LENGTH     0x27F
@@ -134,7 +134,7 @@ static void InstallTitle(const char *titlePath)
                         OSScreenClearBufferEx(i, 0);
 
                         OSScreenPutFontEx(i, 0, 0, TITLE_TEXT);
-                        OSScreenPutFontEx(i, 0, 2, "Installing title... (Thanks to Dimok and crediar)");
+                        OSScreenPutFontEx(i, 0, 2, "Installing title...");
 
                         __os_snprintf(text, sizeof(text), "%08X%08X - %0.1f / %0.1f MiB (%i%%)", titleIdHigh, titleIdLow, mcpInstallInfo[6] / (1024.0f * 1024.0f),
                                                                                                   mcpInstallInfo[4] / (1024.0f * 1024.0f), percent);
